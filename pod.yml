@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-pod
+  labels:
+    zone: prod
+    version: v1
+    project: test_nginx
+spec:
+  containers:
+    - name: nginx-ctr
+      image: nginx
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 4030
